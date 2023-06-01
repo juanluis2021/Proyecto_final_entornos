@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en"></html>
+<html>
+<head>
+  <title>Alta</title>
+  <link rel="stylesheet" type="text/css" href="./styles/alta.css">
+</head>
+
+<body onload="getPatients(); getMedicines();">
+  <h1>Pàgina d'Alta</h1>
+  <form id="altaForm">
+    
+    <p id="error"></p>
+    <label for="idXip" >"ID Físic del Xip "</label>
+    <input type="number" id="idXip" name="idXip" required><br><br>
+
+    <label for="medicament">Medicament:</label>
+    <select id="medicament" name="medicament"  required></select><br><br>
+
+    <label for="pacient">Pacient:</label>
+    <select id="pacient" name="pacient" required></select><br><br>
+
+    <label for="dataLimit">Data Límit:</label>
+   <!--  <input type="date" id="dataLimit" name="dataLimit" required><br><br>-->
+    <input type="date" id="dataLimit" name="dataLimit" value="yyyy-MM-dd" required><br><br> 
+    <button type="button" onclick="enviar()">Enviar</button>
+  </form>
+  <button onclick="goToGestio()">Gestió</button>
+</body>
+<script src="./js/function_sendII.js"></script>
+</html>
+
+
